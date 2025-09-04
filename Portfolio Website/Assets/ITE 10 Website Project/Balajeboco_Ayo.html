@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylvia's Express</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Montserrat', sans-serif;
+            src: url(Montserrat-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'Merriweather';
+            src: url(MerriweatherSans-Regular.ttf);
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Montserrat'; background-color: #801819; box-sizing: border-box;">
+    <!-- The main navigation bar -->
+    <header style="max-width: 100%; display: flex; align-items: center; padding: 20px 5%; background-color: rgba(128, 24, 25, 0.8); position: sticky; top: 0; z-index: 6;">
+        <img src="Photos/LogoPNG.png" alt="logo" style="height: 10%; width: 10%; margin-right: auto;">
+        <a href="#" style="font-family: 'Montserrat'; color: white; margin-right: auto; cursor:default; text-decoration: none;">YOUR ONE STOP FOOD EXPRESS</a>
+        <style type="text/css">
+            nav ul li, nav ul li a, header button{
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 18px;
+                color: #febd59;
+                text-decoration: none;    
+            }
+        </style>
+        <nav>
+            <style type="text/css">
+                .nav ul{
+                    float: right;
+                    margin-right: 20px;
+                }
+            </style>
+            <ul class="nav_bar" style="list-style-type: none;">
+                <style type="text/css">
+                .nav_bar li{
+                    display: inline-block;
+                    padding: 0px 13px;
+                }
+                .nav_bar li a{
+                    transition: all 0.3s ease 0s;
+                }
+                .nav_bar li a:hover{
+                    background-color: #f56223;
+                    padding: 20px;
+                    border-radius: 1rem;
+                }   
+                </style>
+                <li><a href="#">Home</a></li>
+                <li><a href="#About_Us">About Us</a></li>
+                <li class="#"><a href="#Menu">Menu</a>
+                    <style type="text/css">
+                        ul li ul.dropdown{
+                            width: auto;
+                            background-color: rgba(129, 24, 26, 0.9);
+                            position: absolute;
+                            z-index: 6;
+                            display: none;
+                        }
+                        ul li ul.dropdown li{
+                            display: block;
+                            color: white;
+                            margin-bottom: 30px;
+                        }
+                        ul li:hover ul.dropdown{
+                        display: block;
+                        padding-top: 30px;
+                        border-radius: 1rem;
+                        margin: 10px;
+                        }
+                    </style>
+                    <ul id="dropdown" class="dropdown">
+                        <li class="meals"><a href="#Meals">Meals</a></li>
+                        <li class="snacks"><a href="#Snacks">Snacks</a></li>
+                        <li class="drinks"><a href="#Drinks">Drinks</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Review" style="font-size: 20px; font-weight: bold;">Review</a></li>
+            </ul>
+        </nav>
+        <style type="text/css">
+            header button{
+                padding: 9px 20px;
+                background-color:rgba(254, 189, 89, 1);
+                color: #f56223;
+                font-weight: bolder;
+                font-size: 20px;
+                cursor: pointer;
+                border-radius: 50px;
+                transition: all 0.3s ease 0s;
+                margin-left: 20px;    
+            }
+            button:hover{
+                background-color:rgb(245, 98, 35, 0.8);
+                color: #febd59;
+                border: solid;   
+            }
+        </style>
+        <a href="#contactUs"><button>Contact Us</button></a>
+    </header>
+    <!-- End of navigation bar -->
+
+    <!-- Start of Image Slider -->
+    <section style="padding: 0rem;">
+        <div style="position: relative; margin: 0 auto;">
+            <div class="slider" style="display: flex; aspect-ratio: 21/9; overflow-x: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; box-shadow: 0rem 1.5rem 3 rem -0.75rem hsla(0, 0%, 0%, 0.25); -ms-overflow-style: none; scrollbar-width: none;">
+                <style type="text/css">
+                    .slider::-webkit-scrollbar{
+                        display: none;
+                    }
+                    .slider img{
+                        flex: 1 0 100%;
+                        scroll-snap-align: start;
+                        object-fit: cover;
+                    }
+                </style>
+                <img id="slide-1" src="Photos/full menu.jpg" alt="picture of food">
+                <img id="slide-2" src="Photos/drinks.jpg" alt="picture of drinks">
+                <img id="slide-3" src="Photos/models.jpg" alt="picture of store">
+                <img id="slide-4" src="Photos/Logo_1.png" alt="picture of logo">
+            </div>
+            <div class="slider-nav" style="display: flex; column-gap: 3rem; position: absolute; bottom: 1.25rem; left: 50%; transform: translateX(-50%); z-index: 1;">
+                <style type="text/css">
+                    .slider-nav a{
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        border-radius: 50%;
+                        background-color:#f56223;
+                        opacity: 1;
+                        transition: opacity ease 250ms;
+                    }
+                    .slider-nav a:hover {
+                        background-color: #febd59;
+                        opacity: 1;
+                    }
+                </style>
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+            </div>
+        </div>
+    </section>
+    <!-- End of Image Slider -->
+
+    <!-- Start of Restaurant Details -->
+    <div style="text-align: center;">
+        <h1 style="margin-top: 80px; font-family: 'Montserrat'; font-size: 40px; color:#febd59; text-align: center; background-color: #801819;">Welcome to Syvlia's Express!</h1>
+        <h2 style="color: white; font-size: 30px;">Your One Stop Food Express</h2>
+    </div>
+    <style>
+        .background{
+            background-color: #e4be9e;
+            min-height: 300px;
+            width: auto;
+            padding: 60px;
+        }
+        .title{
+            text-transform: uppercase;
+            font-size: 30px;
+            padding-bottom: 20px; 
+            font-weight: bold;
+        }
+        .description{
+            font-family: 'Merriweather';
+            font-size: 20px;
+        }
+    </style>
+    <!-- Start of Restaurant Details: About Us -->
+    <div id="About_Us" style="scroll-margin-top: 15rem;"></div>
+    <div style="margin-top: 80px; margin-left: 80px; margin-right: 80px; display: flex; align-items: center; overflow-x: hidden;">
+        <div class="background">
+            <div class="title"><p>About Us</p></div>
+            <div class="description"><p>We are a family-owned restaurant dedicated to bringing you meals, snacks, and drinks to fill your stomach and to satisfy your tastebuds! Our tagline, "Your One Stop Food Express," perfectly captures the essence of what we do. We've got a wide-ranging menu that caters to all your cravings.</p>
+            </div>
+        </div>
+        <div class><img src="Photos/Model_2.jpg" style="flex: 50%; max-height: 300px; width: auto;"></div>
+    </div>
+    <!-- End of Restaurant Details: About Us -->
+
+    <!-- Start of Restaurant Details: Contact Numbers and Opening Hours -->
+    <div id="OpeningHours" style="margin-top: 20px; margin-left: 80px; margin-right: 80px;">
+        <div class="background">
+            <div class="title"><p>Our Opening Hours</p></div>
+            <style>
+                #OpeningHours .description{
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(auto, 1fr) );
+                    text-align: left;
+                    width: 100%;
+                    overflow: hidden;
+                }   
+            </style>
+            <div class="description">
+                <p>Monday:</p>
+                <p>9:00AM - 5:00PM</p>
+                <p>Tuesday:</p>
+                <p>9:00AM - 5:00PM</p>
+                <p>Wednesday:</p>
+                <p>9:00AM - 5:00PM</p>
+                <p>Thrusday:</p>
+                <p>9:00AM - 5:00PM</p>
+                <p>Friday:</p>
+                <p>9:00AM - 5:00PM</p>
+                <p>Saturday:</p>
+                <p>10:00AM - 7:00PM</p>
+                <p>Sunday:</p>
+                <p>Closed</p>
+            </div>
+            <br><br>
+            <div class="title"><p>Text Us</p></div>
+            <div class="description" id="numbers">
+                <p>Smart: +639081124564</p>
+                <p>Globe: +639671356321</p>
+                <p>Sun: +639233595830</p>
+                <p>DITO: +639940957483</p>
+            </div>
+        </div>
+    </div>
+    <!-- End of Restaurant Details: Contact Numbers and Opening Hours -->
+
+    <!-- Start of  Restaurant Details: Contact Us and Location Section -->
+    <div id="contactUs" style="text-align: center; margin-bottom: 200px; margin-top: 80px;scroll-margin-top: 10rem;">
+        <style type="text/css">
+            .contactUs_boxes{
+                vertical-align: middle;
+                min-width: 400px;
+                max-width: 100%;
+                display: inline-block;
+                color: white;
+                background-color: #f28500;
+                border-radius: 2rem;
+                padding: 10px;
+                margin: 30px;
+                overflow: -moz-hidden-unscrollable;
+            }
+        </style>
+        <div class="contactUs_boxes" style="font-weight: bold; font-size: 30px; text-align: center; margin: auto; overflow-x: hidden;">
+            <div style="padding: 20px;">Visit Us Here!</div>
+            <style type="text/css">
+                .contactUs_boxes iframe{
+                    border-radius: 1rem;
+                    height: 320px;
+                    min-height: auto;
+                    min-width: 500px;
+                }
+            </style>
+            <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.32879371739364!2d125.5402133753523!3d8.948107996384286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301c182118eecd5%3A0x806860be02114e7e!2sSylvia&#39;s%20Food%20Express!5e0!3m2!1sen!2sph!4v1697642643803!5m2!1sen!2sph" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+        <div id="messageUs" class="contactUs_boxes">
+            <p style="font-size: 30px; text-transform: uppercase; font-weight: 700; padding: 20px;">Contact Us</p>
+            <style type="text/css">
+                .contact-form{
+                    display: grid;
+                    grid-row: 1;
+                    row-gap: 1rem; 
+                }
+                .contact-form input, textarea{
+                    border: none;
+                    outline: none;
+                    background: #fca21c;
+                    padding: 10px;
+                    font-size: 0.9rem;
+                    color: white;
+                    border-radius: 0.5rem;
+                    resize: none;
+                }
+            </style>
+            <form action="#" class="contact-form">
+                <style type="text/css">
+                    .row{
+                        max-width: 960px;
+                        margin: auto;
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(1, 1fr);
+                        gap: 1rem;
+                        padding: 10px;
+                        box-shadow: 0 0 1rem hsla(0 0 0 / 10%);
+                        border-radius: 0.5rem;
+                        overflow: hidden;
+                    }
+                </style>
+                <div class="row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="youremail@address.com" required>
+                    <textarea cols="60" rows="7" placeholder="Leave Us A Message..." required></textarea>
+                    <style type="text/css">
+                        ::placeholder{
+                            color: rgb(255, 219, 158);
+                        }
+                        .Send_button{
+                            width: 50%;
+                            justify-self: center;
+                            background:#f56223;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            cursor: pointer; 
+                        }
+                        .Send_button:hover{
+                            background:#f59323;
+                            text-transform: uppercase;
+                            cursor: pointer;
+                        }
+                    </style>
+                    <input type="submit" value="Send" class="Send_button">
+                </div>
+            </form>
+        </div> 
+    </div>
+    <!-- End of  Restaurant Details: Contact Us and Location Section -->
+
+    <!-- Start of Restaurant Details: Menu -->
+    <div style="width: auto; height: 30px; background-color: #f59023; margin-top: 80px;"></div>
+    <div id="Menu" style="scroll-margin-top: 10rem;">
+        <style type="text/css">
+            .menuDiv{
+                text-transform: uppercase;
+                background-color: #febd59;
+                border-style: solid;
+                border-color: #801819;
+                border-width: 10px;
+                height: 100px;
+                width: 300px;
+                border-radius: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                position: relative;
+                margin: auto;
+                margin-top: -70px;
+                margin-bottom: 60px;
+            }
+            .menuDiv p{
+                font-family: "Montserrat";
+                color: white;
+                text-decoration: none;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            #Meals, #Snacks, #Drinks{
+                scroll-margin-top: 9rem; 
+            }
+            .menuBackground{
+                background-color: white;
+                min-height: 1000px;
+                width: auto;
+                margin: 20px;
+                border-radius: 2rem;
+                padding-bottom: 30px;
+                margin-bottom: 60px;
+                background-image: url(Photos/Marble\ background.avif)
+            }
+            .HeaderMenu{
+                font-family: "Merriweather";
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 40px;
+                margin-left: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 25px;
+                font-weight: bolder;
+                color: #ffffff;
+                background-color: #f58c23;
+                width: 250px;
+                height: auto;
+                border-radius: 1.5rem;
+                position: absolute;
+            }
+            .menuItems{
+                width: 100%;
+                height: auto;
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding-top: 100px;
+                margin-bottom: 50px;
+            }
+            .Items{
+                font-family: 'Merriweather';
+                width: 450px;
+                height: auto;
+                background-color: #fff0d3;
+                margin: 10px;
+                box-shadow: 0rem 1rem 1rem -0.75rem hsla(0, 0%, 0%, 0.25);
+            }
+            .Items p{
+                padding:20px;
+            }
+            .item_image{
+                height: 170px;
+                width: auto;
+                overflow: hidden;
+            }
+            .item_image img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .item_image img:hover{
+                object-fit: cover;
+                transform: scale(120%);
+                transition: all 0.3s ease 0s;;
+            }
+            .item_title{
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: large
+            }
+            .item_description{
+                padding-bottom: 20px;
+            }
+            .item_price{
+                border-top: 1px solid rgb(0, 0, 0, 0.1);
+            }
+        </style>
+        <div class="menuDiv"><p>Menu</p></div>
+        <!-- Start of Menu: Meals -->
+        <div class="menuBackground">
+            <div id=Meals class="HeaderMenu">Meals</div>
+            <div class="menuItems">
+                <div class="Items" alt="Siomai Rice">
+                    <div class="item_image">
+                        <img src="Photos/siomairice.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>3 Pieces Siomai with Rice</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Regular, Spicy, Extra Spicy</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱35</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Grilled Chicken with Rice">
+                    <div class="item_image">
+                        <img src="Photos/Grilled Chicken with Rice.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Grilled Chicken with Rice</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Harissa, Kebabs, Pineapple Chicken</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱100</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Sisig with Rice">
+                    <div class="item_image">
+                        <img src="Photos/Sisig with Rice.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Sisig with Rice</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Pork Dinakdan, Tuna Sisig, Pusit Sisig</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱100</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Shawarma Rice">
+                    <div class="item_image">
+                        <img src="Photos/Shawarma Rice.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Shawarma Rice</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Pork Shawarma, Beef Shawarma</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱120</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Silog Meal">
+                    <div class="item_image">
+                        <img src="Photos/Silog Meal.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Silog Meals</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Beefsilog, Bacsilog, Hotsilog</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱120</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Menu: Meals-->
+
+        <!-- Start of Menu: Snacks -->
+        <div class="menuBackground">
+            <div id=Snacks class="HeaderMenu">Snacks</div>
+            <div class="menuItems">
+                <div class="Items" alt="Waffles">
+                    <div class="item_image">
+                        <img src="Photos/Waffles.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Waffles</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Nutella, Oreo Creamcheese, Peanut Butter, Yema, Tuna</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱45</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Fries">
+                    <div class="item_image">
+                        <img src="Photos/fries.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Fries</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Curly Fries, Criss Cross Fries, Hash Browns, Mashed Potato Fries, Regular Fries</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱100</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Takoyaki">
+                    <div class="item_image">
+                        <img src="Photos/takoyaki.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Takoyaki</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from:  Original Takoyaki, Cheese Balls, Sausage Takoyaki</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱100</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Popcorn">
+                    <div class="item_image">
+                        <img src="Photos/popcorn.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Popcorn</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Cheese, Barbeque, Caramel, Sour Cream, Salted Popcorn</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱120</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Chips">
+                    <div class="item_image">
+                        <img src="Photos/chips.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Chips</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Plain, Salted, Cheese, Sour Cream, Barbeque</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱70</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Garlic Bread">
+                    <div class="item_image">
+                        <img src="Photos/Garlic Bread.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Garlic Bread</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Plain, Cream Cheese, Chive Garlic Bread, Parmesan Garlic Bread Sticks</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱100</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Menu: Snacks -->
+
+        <!-- Start of Menu: Drinks -->
+        <div class="menuBackground">
+            <div id=Drinks class="HeaderMenu">Drinks</div>
+            <div class="menuItems">
+                <div class="Items" alt="Italian Soda">
+                    <div class="item_image">
+                        <img src="Photos/drinks.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Italian Soda</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Strawberry, Blueberry Green Apple, Four Seasons</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱39</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Ice Coffee">
+                    <div class="item_image">
+                        <img src="Photos/Coffee Drinks.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Iced Coffee</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Tiger Macchiato, Macha Coffee, Iced Americano</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱35</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Milkshake">
+                    <div class="item_image">
+                        <img src="Photos/Milkshake.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Milkshakes</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Chocoshake, Mangoshake, Ubeshake, Rockyroad Milkshake</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱100</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Lemonade">
+                    <div class="item_image">
+                        <img src="Photos/Lemonade Drinks.jpg">
+                    </div>
+                    <div class="item_title">
+                        <p>Lemonade</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Classic Lemonade, Cucumber Lemonade, Blue Lemonade, Mango Lemonade</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱35</p>
+                    </div>
+                </div>
+                <div class="Items" alt="Softdrinks">
+                    <div class="item_image">
+                        <img src="Photos/Softdrinks.webp">
+                    </div>
+                    <div class="item_title">
+                        <p>Softdrinks</p>
+                    </div>
+                    <div class="item_description">
+                        <p>Choose from: Royal, Sprite, Coke, Coke Zero, Mountain Dew</p>
+                    </div>
+                    <div class="item_price">
+                        <p>Starts at ₱25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Menu: Drinks -->
+    </div>
+    <!-- End of Restaurant Details: Menu -->
+
+    <!-- Start of Restaurant Details: Customer Review Form -->
+    <div id="Review" style="margin: 50px; text-align: center; padding: 50px; justify-content: center; color: white; scroll-margin-top: 5rem;">
+        <div><h1 style>Leave Us a Review!</h1></div>
+        <style type="text/css">
+            .star{
+                display: inline-block;
+                position: relative;
+                height: 50px;
+                line-height: 50px;
+                font-size: 50px;
+            }
+            .star label{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                cursor: pointer;
+            }
+            .star label:last-child{
+                position: static;
+            }
+            .star label:nth-child(1){
+                z-index: 5;
+            }
+            .star label:nth-child(2){
+                z-index: 4;
+            }
+            .star label:nth-child(3){
+                z-index: 3;
+            }
+            .star label:nth-child(4){
+                z-index: 2;
+            }
+            .star label:nth-child(5){
+                z-index: 1;
+            }
+            .star label input{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+            .star label .character{
+                float: left;
+                color: transparent;
+            }
+            .star label:last-child .character{
+                color: #fca21c;
+            }
+            .star:not(:hover) label input:checked ~ .character,
+            .star:hover label:hover input ~ .character {
+                color: #ff4d00;
+            }
+            .star label input:focus:not(:checked) ~ .character:last-child {
+                color: #fca21c;
+                text-shadow: 0 0 5px #ff4d00;
+            }
+        </style>
+        <div id="messageUs" class="contactUs_boxes">
+            <form class="star">
+                <label>
+                    <input type="radio" name="stars" value="1" />
+                    <span class="character">★</span>
+                    </label>
+                    <label>
+                    <input type="radio" name="stars" value="2" />
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    </label>
+                    <label>
+                    <input type="radio" name="stars" value="3" />
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    <span class="character">★</span>   
+                    </label>
+                    <label>
+                    <input type="radio" name="stars" value="4" />
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    </label>
+                    <label>
+                    <input type="radio" name="stars" value="5" />
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    <span class="character">★</span>
+                    </label>
+            </form>
+            <form action="#" class="contact-form">
+                <div class="row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="youremail@address.com" required>
+                    <input type="submit" value="Send" class="Send_button">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End of Restaurant Details: Customer Review Form -->
+    <!-- End of Restaurant Details -->
+
+<!-- Start of Footer -->
+<footer style="background-color: #801819; padding: 70px 0; ">
+    <div class="footer_container" style="max-width: 1170px; margin: auto;">
+        <style>
+            .footer_row{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .footer_col ul{
+                list-style: none;
+            }
+            .footer_col{
+                width: 25%;
+                padding: 0 15px;
+            }
+            .footer_col h4{
+                font-size: 18px;
+                color: #ffffff;
+                margin-bottom: 30px;
+                font-weight: 500;
+                position: relative;
+            }
+            .footer_col h4::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color:#f59023;
+                height: 2px;
+                box-sizing: border-box;
+                width: 50px;
+            }
+            .footer_col ul li:not(:last-child){
+                margin-bottom: 10px;
+            }
+            .footer_col ul li a{ 
+                font-size: 16px;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 300;
+                display: block;
+                color: rgba(255, 203, 161, 0.8);
+                transition: all 0.3s ease;
+            }
+            .footer_col ul li a:hover{
+                color: #ffffff;
+                padding-left: 10px;
+            }      
+        </style>
+        <div class="footer_row">
+            </style>
+            <div class="footer_col">
+                <h4>Sylvia's Express</h4>
+                <ul>
+                    <li><a href="#About_Us">About Us</a></li>
+                    <li><a href="#Menu">Our Menu</a></li>
+                    <li><a href="#contactUs">Our Location</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><a href="mailto:ayobalajeboco@gmail.com">ayobalajeboco@gmail.com</a></li>
+                    <li><a href="mailto:sylviaexpress@gmail.com">sylviaexpress@gmail.com</a></li>
+                    <li><a href="#contactUs">Contact Us</a></li>
+                    <li><a href="#Review">Rate Us</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Created By:</h4>
+                <ul>
+                    <li><a href="#" style="cursor: default;">Ayo Rosario M. Balajeboco</a></li>
+                    <li><a href="#" style="cursor: default;">Section: EM1</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- End of Footer -->
+</body>
+</html>
