@@ -685,10 +685,6 @@ body.dark footer a:hover p {
     color: #FF6B6B;
 }
 
-body.dark .footer_icon img {
-    filter: invert(1);
-}
-
 /* Education list bullet fix */
 .list-item-container {
     display: flex;
