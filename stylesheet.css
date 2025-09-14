@@ -24,6 +24,7 @@ body{
     background-color: rgb(61, 49, 41);
     margin: 0;
     display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header{
@@ -35,6 +36,7 @@ header{
     padding: 23px 10%;
     position: sticky;
     z-index: 6;
+    transition: background-color 0.3s ease;
 }
     nav{
         position: relative;
@@ -53,6 +55,7 @@ header{
     .logo{
         font-family: 'Facile';
         font-size: 30px;
+        transition: text-decoration-color 0.3s ease;
     }
     .nav_links{
         list-style: none;
@@ -70,7 +73,7 @@ header{
             text-underline-offset: 10px;
         }
     .nav_links li a{
-        transform: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
     }
     .nav_links li a:hover{
         color: #F15152;
@@ -95,6 +98,7 @@ header{
         hsl(27deg 24% 19%) 26%,
         hsl(28deg 26% 16%) 41%,
         hsl(28deg 28% 13%) 79%);
+    transition: background-image 0.3s ease;
 }
     .Introduction_text{
         list-style: none;
@@ -195,6 +199,7 @@ header{
     padding-right: 70px;
     padding-bottom: 80px;
     font-family: 'Noir';
+    transition: background-color 0.3s ease;
 }
     .Services_header{
         padding: 30px;
@@ -231,6 +236,7 @@ header{
             background-color: aliceblue;
             height: auto;
             border-radius: 2rem;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
         }
         .icons{
             max-width: 50px;
@@ -252,6 +258,7 @@ header{
     margin-bottom: 50px;
     border-radius: 2rem;
     padding: 50px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
     .Skills{
         text-align: left;
@@ -263,6 +270,7 @@ header{
         text-decoration-color:#F15152;
         text-decoration-thickness: 5px;
         text-underline-offset: 12px;
+        transition: color 0.3s ease;
     }
     .Skills_list {
         display: flex;
@@ -284,6 +292,7 @@ header{
         color: #3c3028;
         font-weight: 550;
         overflow: hidden;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
     }
     .Skills_list div img{
         width: 100%;
@@ -301,6 +310,7 @@ header{
     background-size: cover;
     padding: 50px;
     padding-bottom: 100px;
+    transition: background 0.3s ease;
 }
     .Portfolio_header{
         padding-bottom: 30px;
@@ -361,6 +371,7 @@ header{
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 100px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 .About_container{
     margin-bottom: 50px;
@@ -383,6 +394,7 @@ header{
         font-size: 25px;
         font-weight: bold;
         padding-bottom: 70px;
+        transition: color 0.3s ease;
     }
         .About_header h1{
             text-decoration: underline;
@@ -405,12 +417,14 @@ header{
         border-radius: 1rem;
         border: 2px solid #F15152;
         overflow: hidden;
+        transition: background-color 0.3s ease, color 0.3s ease;
         }
         table.Personal_Information_Table td {
             padding: 13px 15px;
         }
         table.Personal_Information_Table tr:nth-child(even) {
             background: #b09482;
+            transition: background-color 0.3s ease;
         }
         table.Personal_Information_Table tbody td:nth-child(1){
             width: 25%;
@@ -447,6 +461,7 @@ header{
                 height: auto;
                 border: 2px solid #F15152;
                 overflow: hidden;
+                transition: background-color 0.3s ease, color 0.3s ease;
             }
                 .list_container {
                     position:relative;
@@ -492,6 +507,7 @@ header{
                 width: 710px;
                 border: 2px solid #F15152;
                 overflow: hidden;
+                transition: background-color 0.3s ease, color 0.3s ease;
             }
                 .list-year-experience{
                     margin-right: 20px;
@@ -503,6 +519,7 @@ header{
                     width: 180px;
                     height: auto;
                     border-radius: 2rem;
+                    transition: background-color 0.3s ease, color 0.3s ease;
                 }
                 .list-work{
                     font-weight:400;
@@ -512,6 +529,7 @@ header{
                     padding-right: 5px;
                     height: auto;
                     width: auto;
+                    transition: background-color 0.3s ease, color 0.3s ease;
                 }
                 .list-company{
                     font-weight:200;
@@ -525,6 +543,7 @@ footer{
     background-color: hsl(27deg 24% 19%);
     color: white;
     font-family: 'Montserrat';
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
     footer h1{
         padding-bottom: 50px;
@@ -542,6 +561,7 @@ footer{
     footer a{
         text-decoration: none;
         color: white;
+        transition: color 0.3s ease;
     }
     .footer_wrapper{
         display: flex;
