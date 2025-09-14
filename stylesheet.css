@@ -115,6 +115,9 @@ header{
             margin: 0;
             padding: 0;
         }
+        .Introduction_text > ul > li:nth-child(1) {
+            font-size: 40px;
+        }
         .Introduction_text ul ul{
             padding-top: 20px;
             font-size: 80px;
@@ -123,14 +126,14 @@ header{
             list-style-type: none;
             display: inline;
         }
-        .Introduction_text ul:nth-child(1){
-            font-size: 40px;
-        }
-        .Introduction_text ul ul :nth-child(2){
+        .Introduction_text ul ul > li:nth-child(2){
             -webkit-text-stroke: 2px #F15152;
-            -webkit-text-fill-color: #2a2118;
+            -webkit-text-fill-color: transparent;
         }
-        .Introduction_text ul :nth-child(3) span{
+        .Introduction_text > ul > li:nth-child(3) {
+            margin-top: 20px;
+        }
+        .Introduction_text ul > li:nth-child(3) span{
             color: white;
             font-size: 20px;
             font-family: 'Noir';
@@ -139,14 +142,14 @@ header{
         } 
     .Introduction_text p{
         font-size: 20px;
-        padding: 10px; /* Match editing padding */
-        margin: 20px 0; /* Use margin for vertical spacing */
+        padding: 30px 10px; /* Restore vertical padding, keep horizontal for editing */
+        margin: 0; /* Remove margin */
         text-transform: none;
         font-family: 'Montserrat';
         text-align: justify;
-        border: 2px dashed transparent; /* Add transparent border */
-        border-radius: 8px; /* Match editing border-radius */
-        transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+        border: 2px dashed transparent; 
+        border-radius: 8px;
+        transition: background-color 0.3s, border-color 0.3s; 
     }
     .Introduction_text p.editing {
         border-color: #F15152; /* Make border visible */
@@ -343,11 +346,6 @@ header{
                         }
 
 #About_Me{
-    background: rgb(255,236,209);
-    background: rgb(160,94,42);
-    background: rgb(160,94,42);
-    background: rgb(189,137,92);
-    background: rgb(255,236,209);
     background: 
         radial-gradient(circle, 
         rgba(255,236,209,1) 0%, 
@@ -447,6 +445,8 @@ header{
                 padding: 20px;
                 width: 400px;
                 height: auto;
+                border: 2px solid #F15152;
+                overflow: hidden;
             }
                 .list_container {
                     position:relative;
@@ -490,6 +490,8 @@ header{
                 background-color: white;
                 padding: 20px;
                 width: 710px;
+                border: 2px solid #F15152;
+                overflow: hidden;
             }
                 .list-year-experience{
                     margin-right: 20px;
@@ -613,10 +615,15 @@ body.dark .Services_list div .icons {
 }
 
 body.dark #Skills {
-    background: #1F1F1F;
+    background: #2A2A2A;
     color: #EDEDED;
+    box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);
 }
 body.dark .Skills {
+    color: #EDEDED;
+}
+body.dark .Skills_list div {
+    background-color: #2A2A2A;
     color: #EDEDED;
 }
 body.dark .Skills_list div p {
@@ -624,6 +631,7 @@ body.dark .Skills_list div p {
 }
 body.dark .Skills_list_image {
     background-color: #333;
+    border: 2px solid #F15152;
 }
 
 body.dark #Portfolio {
@@ -657,16 +665,11 @@ body.dark .Experience_container {
 }
 body.dark .list-year-experience {
     background-color: #F15152;
-    color: #121212;
+    color: white;
 }
 body.dark .list-work {
     background-color: #FF6B6B;
     color: white;
-}
-
-body.dark footer {
-    background-color: #0D0D0D;
-    color: #EDEDED;
 }
 
 /* Education list bullet fix */
@@ -688,7 +691,7 @@ body.dark footer {
 /* Custom color improvements */
 
 /* Who Am I? header */
-.About_header {
+body:not(.dark) .About_header {
     text-align: center;
     font-family: 'Noir';
     color: #3a2d23;
@@ -698,34 +701,39 @@ body.dark footer {
 }
 
 /* Personal Information Table */
-table.Personal_Information_Table {
+body:not(.dark) table.Personal_Information_Table {
     background-color: #fff4ec;
     border: 2px solid #F15152;
     border-collapse: separate;
     border-spacing: 0;
     overflow: hidden;
 }
-table.Personal_Information_Table tr:nth-child(even) {
+body:not(.dark) table.Personal_Information_Table tr:nth-child(even) {
     background: #fbe0d9;
 }
 
 /* Skills Section */
-#Skills {
+body:not(.dark) #Skills {
     background: #f5d6c6;
 }
-.Skills {
+body:not(.dark) .Skills {
     color: #2d1e12;
 }
-.Skills_list_image {
+body:not(.dark) .Skills_list_image {
     background-color: #fff0e6;
     border: 2px solid #F15152;
 }
 
 /* Services list cards */
-.Services_list div {
+body:not(.dark) .Services_list div {
     background-color: #fff0e6;
     border: 2px solid #F15152;
     transition: transform 0.3s ease, background-color 0.3s ease;
+}
+body:not(.dark) .Services_list div:hover {
+    background-color: #F15152;
+    color: white;
+    transform: translateY(-5px);
 }
 .Services_list div:hover {
     background-color: #F15152;
