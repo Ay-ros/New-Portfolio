@@ -672,6 +672,24 @@ body.dark .list-work {
     color: white;
 }
 
+body.dark footer {
+    background-color: #0D0D0D;
+    color: #EDEDED;
+}
+
+body.dark footer a {
+    color: #EDEDED;
+}
+
+body.dark footer a:hover p {
+    color: #FF6B6B;
+}
+
+body.dark .footer_icon img {
+    filter: invert(1);
+}
+
+/* Education list bullet fix */
 .list-item-container {
     display: flex;
     align-items: center;
