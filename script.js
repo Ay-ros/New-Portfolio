@@ -19,19 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Editable description
     const description = document.querySelector('.Introduction_text p');
+    const editBtn = document.getElementById('edit-desc-btn');
 
-    if (description) {
-        const editBtn = document.createElement('button');
-        editBtn.textContent = 'Edit';
-        editBtn.id = 'edit-desc-btn';
-
-        const aboutMeButton = document.querySelector('.Introduction_text a[href="#About_Me"]');
-        if (aboutMeButton) {
-            aboutMeButton.parentElement.insertBefore(editBtn, aboutMeButton);
-        } else {
-            description.parentElement.insertBefore(editBtn, description.nextSibling);
-        }
-
+    if (description && editBtn) {
         editBtn.addEventListener('click', () => {
             if (description.contentEditable === 'true') {
                 description.contentEditable = 'false';

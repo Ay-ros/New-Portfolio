@@ -1,8 +1,4 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url(Assets/Montserrat-Regular.ttf);
-}
-@font-face {
     font-family: 'Facile';
     src: url(Assets/Facile\ Sans.ttf);
 }
@@ -171,19 +167,10 @@ header{
         cursor:pointer;
         font-size:17px;
         padding:15px 25px;
-        margin: 10px;
+        margin: 0;
     }
-    #edit-desc-btn {
-        text-transform: uppercase;
-        font-family: 'Noir';
-        color: white;
-        background-color: #F15152;
-        border-radius: 28px;
-        border: 1px solid rgb(255, 61, 61);
-        cursor: pointer;
-        font-size: 17px;
-        padding: 15px 25px;
-        margin: 10px;
+    #edit-desc-btn, .Introduction_text a {
+        margin: 10px; 
     }
     #Introduction img{
         min-width: 0px;
@@ -774,6 +761,14 @@ body:not(.dark) .Services_list div:hover {
 
 /* Services list cards */
 .Services_list div {
+    background-color: #fff0e6;
+    border: 2px solid #F15152;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.Services_list div:hover {
+    background-color: #F15152;
+    color: white;
+    transform: translateY(-5px);
     background-color: #fff0e6;
     border: 2px solid #F15152;
     transition: transform 0.3s ease, background-color 0.3s ease;
