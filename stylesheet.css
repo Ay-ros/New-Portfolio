@@ -142,8 +142,8 @@ header{
         } 
     .Introduction_text p{
         font-size: 20px;
-        padding: 30px 10px; /* Restore vertical padding, keep horizontal for editing */
-        margin: 0; /* Remove margin */
+        padding: 30px 10px; 
+        margin: 0; 
         text-transform: none;
         font-family: 'Montserrat';
         text-align: justify;
@@ -152,7 +152,7 @@ header{
         transition: background-color 0.3s, border-color 0.3s; 
     }
     .Introduction_text p.editing {
-        border-color: #F15152; /* Make border visible */
+        border-color: #F15152; 
         background-color: rgba(241, 81, 82, 0.1);
         outline: none;
     }
@@ -672,7 +672,6 @@ body.dark .list-work {
     color: white;
 }
 
-/* Education list bullet fix */
 .list-item-container {
     display: flex;
     align-items: center;
@@ -687,8 +686,6 @@ body.dark .list-work {
     border-radius: 50%;
     flex-shrink: 0;
 }
-
-/* Custom color improvements */
 
 /* Who Am I? header */
 body:not(.dark) .About_header {
@@ -740,6 +737,7 @@ body:not(.dark) .Services_list div:hover {
     color: white;
     transform: translateY(-5px);
 }
+
 /* Services list cards */
 .Services_list div {
     background-color: #fff0e6;
