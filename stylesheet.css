@@ -37,7 +37,11 @@ header{
     z-index: 6;
 }
     nav{
-        position: sticky;
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     nav li , nav a{
         font-family: 'Noir';
@@ -52,6 +56,8 @@ header{
     }
     .nav_links{
         list-style: none;
+        display: flex;
+        align-items: center;
     }
     .nav_links li{
         display: inline-block;
@@ -98,6 +104,10 @@ header{
         margin-right: 100px;
         color: white;
     }
+        .Introduction_text > a, .Introduction_text > button {
+            display: inline-block;
+            vertical-align: middle;
+        }
         .Introduction_text ul{
             list-style-type: none;
             font-family: 'Facile';
@@ -129,10 +139,19 @@ header{
         } 
     .Introduction_text p{
         font-size: 20px;
-        padding: 30px 0px 30px;
+        padding: 10px; /* Match editing padding */
+        margin: 20px 0; /* Use margin for vertical spacing */
         text-transform: none;
         font-family: 'Montserrat';
         text-align: justify;
+        border: 2px dashed transparent; /* Add transparent border */
+        border-radius: 8px; /* Match editing border-radius */
+        transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    }
+    .Introduction_text p.editing {
+        border-color: #F15152; /* Make border visible */
+        background-color: rgba(241, 81, 82, 0.1);
+        outline: none;
     }
     .Introduction_text button{
         text-transform: uppercase;
@@ -145,6 +164,18 @@ header{
         cursor:pointer;
         font-size:17px;
         padding:15px 25px;
+        margin: 10px;
+    }
+    #edit-desc-btn {
+        text-transform: uppercase;
+        font-family: 'Noir';
+        color: white;
+        background-color: #F15152;
+        border-radius: 28px;
+        border: 1px solid rgb(255, 61, 61);
+        cursor: pointer;
+        font-size: 17px;
+        padding: 15px 25px;
         margin: 10px;
     }
     #Introduction img{
@@ -528,30 +559,10 @@ footer{
         margin-right: 20px;
     }
 
-/* Navbar center fix */
-nav {
-    position: relative;
-    display: flex;
-    justify-content: center; /* center nav links */
-    align-items: center;
-    width: 100%;
-}
-
-.nav_links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav_links li {
-    padding: 0 25px;
-}
-
 /* Toggle button on right */
 #theme-toggle {
     position: absolute;
-    right: 30px;
+    right: 0;
     background: none;
     border: none;
     font-size: 24px;
@@ -580,6 +591,10 @@ body.dark nav a:hover {
 
 body.dark .logo {
     text-decoration-color: #F15152;
+}
+
+body.dark .Introduction_text p.editing {
+    background-color: rgba(255, 107, 107, 0.15);
 }
 
 body.dark #Introduction {
@@ -706,6 +721,17 @@ table.Personal_Information_Table tr:nth-child(even) {
     border: 2px solid #F15152;
 }
 
+/* Services list cards */
+.Services_list div {
+    background-color: #fff0e6;
+    border: 2px solid #F15152;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.Services_list div:hover {
+    background-color: #F15152;
+    color: white;
+    transform: translateY(-5px);
+}
 /* Services list cards */
 .Services_list div {
     background-color: #fff0e6;

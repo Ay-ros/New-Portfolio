@@ -7,33 +7,34 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <hea<script src="script.js"></script>
-</body>
-</html>     <nav>
-        <ul class="nav_links">
-            <li><a href="#Introduction">Home</a></li>
-            <li><a href="#Services">Services</a></li>
-            <li class="logo">AYO BALAJEBOCO</li>
-            <li><a href="#Portfolio">Projects</a></li>
-            <li><a href="#About_Me">About</a></li>
-        </ul>
-        <button id="theme-toggle">🌙</button>
-    </nav>
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#Introduction">Home</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li class="logo">AYO BALAJEBOCO</li>
+                <li><a href="#Portfolio">Projects</a></li>
+                <li><a href="#About_Me">About</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </nav>
     </header>
     <div id="Introduction">
         <div class="Introduction_text">
             <ul>
                 <li>Hi There!</li>
-                <ul>
-                    <li>I'm</li>
-                    <li>Ayo Balajeboco</li>
-                </ul>
+                <li>
+                    <ul>
+                        <li>I'm</li>
+                        <li>Ayo Balajeboco</li>
+                    </ul>
+                </li>
                 <li><span>Website Developer & Graphic Designer</span></li>
-                <p>I aim to expand my knowledge, and skills, and aim to fully utilize my
-                    abilities to their maximum potential in any task given. I hope to get the
-                    opportunity to apply the skills and knowledge gained from my
-                    experiences.</p>
             </ul>
+            <p>I aim to expand my knowledge, and skills, and aim to fully utilize my
+                abilities to their maximum potential in any task given. I hope to get the
+                opportunity to apply the skills and knowledge gained from my
+                experiences.</p>
             <a href="#About_Me"><button>About Me</button></a>
             <a href="Assets/EM1-Balajeboco-Resume.pdf" target="_blank"><button>View My CV</button></a>
         </div>
@@ -269,12 +270,6 @@
         </div>
     </footer>
 
-<script>
-    const toggleButton = document.getElementById('theme-toggle');
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-        toggleButton.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-    });
-</script>
+    <script src="script.js"></script>
 </body>
-</html
+</html>
